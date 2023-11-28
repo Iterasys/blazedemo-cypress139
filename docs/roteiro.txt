@@ -1,0 +1,31 @@
+Configuração:
+1 - Instalar o Node.JS
+2 - Atualizar o NPM: npm install -g npm@latest --save-dev
+3 - Configurar o projeto como baseado no NPM: npm init -y
+4 - Instalar o Cypress: npm i cypress --save-dev
+5 - Verificar a instalação do Cypress: npx cypress verify
+6 - Abrir o Cypress: npx cypress open
+7 - Configurar o Cypress.config.js
+    viewportHeight:1080,
+    viewportWidth:1920,
+    baseUrl:'https://www.blazedemo.com',
+8 - Criar na raiz do projeto o arquivo tsconfig.json, com este conteúdo
+{
+    "compilerOptions": {
+        "lib": [
+            "ES2015",
+            "DOM"
+        ],
+        "allowJs": true,
+        "noEmit": true,
+        "types": [
+            "cypress"
+        ]
+    },
+    "include": [
+        "cypress/**/*.js",
+        "cypress-file-upload"
+    ]
+}
+
+9 - Instalar o plugin ES6 Mocha Snippets
